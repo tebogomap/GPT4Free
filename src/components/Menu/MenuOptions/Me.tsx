@@ -11,8 +11,7 @@ const Me = () => {
       href='https://gpt4free.io/reverse-proxy-api/'
       target='_blank'
     >
-      <HeartIcon />
-      {t('author')}
+     Get APi Key
     </a>
   );
 };
