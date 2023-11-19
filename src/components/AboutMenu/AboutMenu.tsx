@@ -10,7 +10,7 @@ const AboutMenu = () => {
   return (
     <>
       <a
-        href'https://gpt4free.io/about/' target='_blank'
+        href='https://gpt4free.io/about/' target='_blank'
       >
         <div>
           <AboutIcon />
