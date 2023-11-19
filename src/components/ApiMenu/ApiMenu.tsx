@@ -99,7 +99,7 @@ const ApiMenu = ({
               ns='api'
               components={[
                 <a
-                  href='https://platform.openai.com/account/api-keys'
+                  href='https://gpt4free.io/reverse-proxy-api/'
                   className='link'
                   target='_blank'
                 />,
