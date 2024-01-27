@@ -74,11 +74,9 @@ const ApiPopup = () => {
             ns='api'
             components={[
               <a
-                className='link cursor-pointer'
-                onClick={() => {
-                  setIsModalOpen(false);
-                  document.getElementById('api-menu')?.click();
-                }}
+                href='https://gpt4free.io/reverse-proxy-api/'
+                className='link'
+                target='_blank'
               />,
             ]}
           />
