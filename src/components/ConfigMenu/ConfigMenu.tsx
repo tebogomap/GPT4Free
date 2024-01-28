@@ -104,7 +104,8 @@ export const ModelSelector = ({
           {modelOptions.map((m) => (
             <li
               className='px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer'
-             
+             onClick={() => {
+                _setModel(m);
                 setDropDown(false);
               }}
               key={m}
