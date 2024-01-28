@@ -22,7 +22,6 @@ const ChatConfigMenu = () => {
     <div>
       <button
         className='btn btn-neutral'
-        onClick={() => setIsModalOpen(true)}
         aria-label={t('defaultChatConfig') as string}
       >
         {t('defaultChatConfig')}
