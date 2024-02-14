@@ -17,7 +17,8 @@ const Chat = () => {
       <MobileBar />
       <main className='relative h-full w-full transition-width flex flex-col overflow-hidden items-stretch flex-1'>
         <ChatContent />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346182201667382"
+        <div dangerouslySetInnerHTML={{ __html: `
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346182201667382"
      crossorigin="anonymous"></script>
 <!-- Auto image -->
 <ins class="adsbygoogle"
@@ -29,6 +30,7 @@ const Chat = () => {
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+        ` }} />
         <StopGeneratingButton />
       </main>
     </div>
