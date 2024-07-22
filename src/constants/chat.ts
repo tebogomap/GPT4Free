@@ -30,6 +30,7 @@ export const modelOptions: ModelOptions[] = [
   'gpt-4-turbo-2024-04-09',
   'gpt-4o',
   'gpt-4o-2024-05-13',
+  // New models added
   'gpt-4o-mini',
   'claude-2.1',
   'claude-2.0',
@@ -85,6 +86,14 @@ export const modelCost = {
     completion: { price: 0.002, unit: 1000 },
   },
   // ... (previous model costs remain unchanged)
+  'gpt-4o': {
+    prompt: { price: 0.005, unit: 1000 },
+    completion: { price: 0.015, unit: 1000 },
+  },
+  'gpt-4o-2024-05-13': {
+    prompt: { price: 0.005, unit: 1000 },
+    completion: { price: 0.015, unit: 1000 },
+  },
   'gpt-4o-mini': {
     prompt: { price: 0.005, unit: 1000 },
     completion: { price: 0.015, unit: 1000 },
@@ -127,7 +136,31 @@ export const modelCost = {
   },
 };
 
-// ... (rest of the code remains unchanged)
+export const defaultUserMaxToken = 4000;
+
+export const _defaultChatConfig: ConfigInterface = {
+  model: defaultModel,
+  max_tokens: defaultUserMaxToken,
+  temperature: 1,
+  presence_penalty: 0,
+  top_p: 1,
+  frequency_penalty: 0,
+};
+
+export const generateDefaultChat = (
+  title?: string,
+  folder?: string
+): ChatInterface => ({
+  id: uuidv4(),
+  title: title ? title : 'New Chat',
+  messages:
+    useStore.getState().defaultSystemMessage.length > 0
+      ? [{ role: 'system', content: useStore.getState().defaultSystemMessage }]
+      : [],
+  config: { ...useStore.getState().defaultChatConfig },
+  titleSet: false,
+  folder,
+});
 
 export const codeLanguageSubset = [
   'python',
