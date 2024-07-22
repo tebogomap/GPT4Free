@@ -13,9 +13,7 @@ const Config = () => {
       <a
         className='flex py-2 px-2 items-center gap-3 rounded-md hover:bg-gray-500/10 transition-colors duration-200 text-white cursor-pointer text-sm'
         id='api-menu'
-        href='https://gpt4free.io/reverse-proxy-api/'
-               
-                target='_blank'
+        onClick={() => setIsModalOpen(true)}
       >
         <PersonIcon />
         {t('api')}
